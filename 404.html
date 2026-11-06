@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Page not found · patrick</title>
+  <script>
+    // GitHub Pages serves this document for clean language URLs. The index
+    // restores the requested address once it has loaded the shared bundle.
+    const destination = new URL(location.href);
+    const segments = destination.pathname.split("/").filter(Boolean);
+    const locale = segments.pop();
+    const supported = "zh-CN zh-Hant en-US ja-JP ko-KR th vi id fr-FR de-DE it es pt-BR nl da sv nb-NO fi pl cs sk hu ro bg hr el uk et lv lt ar tr".split(" ");
+    if (supported.includes(locale)) {
+      destination.pathname = "/" + segments.concat("").join("/");
+      destination.searchParams.set("lang", locale);
+      location.replace(destination.href);
+    }
+  </script>
+</head>
+<body>
+  <h1>Page not found</h1>
+  <p>This address does not match a page on patrick’s site.</p>
+</body>
+</html>
